@@ -22,7 +22,7 @@
 
 int main(int argc, char *argv[]) {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  int result = NSApplicationMain(argc,  (const char **) argv);
+    int result = NSApplicationMain(argc, argv);
   [pool drain];
   return result;
 }

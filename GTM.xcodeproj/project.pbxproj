@@ -234,6 +234,7 @@
 		8BF2368E13CF67CB00F3FD82 /* GTMKeyValueAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMKeyValueAnimation.m; sourceTree = "<group>"; };
 		8BF2369113CF694C00F3FD82 /* GTMKeyValueAnimationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMKeyValueAnimationTest.m; sourceTree = "<group>"; };
 		8BF2555110F65B56000490C8 /* GTMTypeCasting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMTypeCasting.h; sourceTree = "<group>"; };
+		C160A3712C58ACE4008EC6BD /* UIUnitTestingHarness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UIUnitTestingHarness.entitlements; sourceTree = "<group>"; };
 		F413908C0D75F63C00F72B31 /* GTMNSFileManager+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSFileManager+Path.h"; sourceTree = "<group>"; };
 		F413908D0D75F63C00F72B31 /* GTMNSFileManager+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSFileManager+Path.m"; sourceTree = "<group>"; };
 		F413908E0D75F63C00F72B31 /* GTMNSFileManager+PathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSFileManager+PathTest.m"; sourceTree = "<group>"; };
@@ -392,6 +393,7 @@
 		0867D691FE84028FC02AAC07 /* GTM */ = {
 			isa = PBXGroup;
 			children = (
+				C160A3712C58ACE4008EC6BD /* UIUnitTestingHarness.entitlements */,
 				8B1A16050D90344B00CA1E8E /* GTMDefines.h */,
 				F48FE26F0D198CBA009257D2 /* AppKit */,
 				F48FE2720D198CCE009257D2 /* Foundation */,
@@ -819,7 +821,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				da,
 				de,
 				en,
 				es,
@@ -827,15 +828,10 @@
 				fr,
 				it,
 				ja,
-				ko,
 				nl,
 				no,
 				pl,
-				pt,
 				ru,
-				sv,
-				zh_CN,
-				zh_TW,
 				Base,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* GTM */;
@@ -1180,10 +1176,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = UIUnitTestingHarness.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = FP47FLDBCU;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = UnitTesting/GTMUIUnitTestingHarness/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.google.GTMUIUnitTestingHarness;
 				PRODUCT_NAME = GTMUIUnitTestingHarness;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1293,10 +1296,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = UIUnitTestingHarness.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = FP47FLDBCU;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = UnitTesting/GTMUIUnitTestingHarness/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.google.GTMUIUnitTestingHarness;
 				PRODUCT_NAME = GTMUIUnitTestingHarness;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -1310,7 +1320,7 @@
 				F4CC9F33148E5DF700B7D68C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		8B45A02D0DA4696D001148C5 /* Build configuration list for PBXNativeTarget "UnitTest-UnitTesting" */ = {
 			isa = XCConfigurationList;
@@ -1319,7 +1329,7 @@
 				F4CC9F39148E5DF700B7D68C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		8B45A2910DA49B9A001148C5 /* Build configuration list for PBXNativeTarget "UIUnitTestingHarness" */ = {
 			isa = XCConfigurationList;
@@ -1328,7 +1338,7 @@
 				F4CC9F3B148E5DF700B7D68C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		F42E081E0D19987200D5DDE0 /* Build configuration list for PBXNativeTarget "UnitTest-Foundation" */ = {
 			isa = XCConfigurationList;
@@ -1337,7 +1347,7 @@
 				F4CC9F38148E5DF700B7D68C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		F42E086F0D199A5C00D5DDE0 /* Build configuration list for PBXNativeTarget "GTM" */ = {
 			isa = XCConfigurationList;
@@ -1346,7 +1356,7 @@
 				F4CC9F34148E5DF700B7D68C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		F48FE2660D198C1F009257D2 /* Build configuration list for PBXNativeTarget "UnitTest-AppKit" */ = {
 			isa = XCConfigurationList;
@@ -1355,7 +1365,7 @@
 				F4CC9F37148E5DF700B7D68C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
